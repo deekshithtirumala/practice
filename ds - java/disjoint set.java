@@ -18,7 +18,7 @@ class DisjointSet{
         }
         
         //recurrsive case :
-        parent.set(u, findUlParent(u));
+        parent.set(u, findUlParent(parent.get(u)));
         return parent.get(u);
     }
     public void unionSet(int u, int v){
