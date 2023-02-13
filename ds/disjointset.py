@@ -21,12 +21,12 @@ class DisjointSet:
             return
         
         elif (self.rank[u]<self.rank[v]):
-            self.parent[u] = ulpar_v
+            self.parent[ulpar_u] = ulpar_v
         elif (self.rank[u]>self.rank[v]):
-            self.parent[v] = ulpar_u
+            self.parent[ulpar_v] = ulpar_u
         else:
-            self.parent[v] = ulpar_u
-            self.rank[u]+=1
+            self.parent[ulpar_v] = ulpar_u
+            self.rank[ulpar_u]+=1
         
 
 dis = DisjointSet(7)
